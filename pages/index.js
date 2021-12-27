@@ -1,12 +1,13 @@
 
 import { Client } from '../prismic-configuration'
+import { SliceZone } from '../components/slices'
 
-export default function Home() {
+
+export default function Home({ doc }) {
+
   return (
     <div className=''>
-      <h1 className='text-3xl'>
-        hello
-      </h1>
+        <SliceZone sliceZone={doc.data.body} />
     </div>
   )
 }
